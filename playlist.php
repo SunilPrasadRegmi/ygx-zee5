@@ -1,7 +1,9 @@
 <?php
 //=============================================================================//
 // FOR EDUCATION PURPOSE ONLY. Don't Sell this Script, This is 100% Free.
+// Join Community https://t.me/ygxworld, https://t.me/ygx_chat
 //=============================================================================//
+
 $jsonFile = 'data.json';
 $jsonData = file_get_contents($jsonFile);
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
@@ -33,6 +35,7 @@ foreach ($data['data'] as $channel) {
 }
 exit;
 //@yuvraj824
+
 
 
 
