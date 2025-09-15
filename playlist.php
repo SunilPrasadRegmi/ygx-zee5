@@ -1,7 +1,6 @@
 <?php
 //=============================================================================//
-// SCRIPT WRITTEN BY @YGX_WORLD TEAM, FOR EDUCATION PURPOSE ONLY.
-// Don't Sell this Script, This is 100% Free.
+// FOR EDUCATION PURPOSE ONLY. Don't Sell this Script, This is 100% Free.
 //=============================================================================//
 $jsonFile = 'data.json';
 $jsonData = file_get_contents($jsonFile);
@@ -10,13 +9,9 @@ $host = $_SERVER['HTTP_HOST'];
 $requestUri = $_SERVER['REQUEST_URI'];
 $scriptUrl = $protocol . $host . str_replace('playlist.php','index.php', $requestUri);
 $data = json_decode($jsonData, true);
-header('Content-Type: text/plain');
+header('Content-Type: audio/x-mpegurl');
 echo "#EXTM3U\n\n";
 echo "# Zee5 Playlist Combined (IN + GB + SG + AE)\n";
-echo "# STRICT WARNING: This is a private server.\n";
-echo "# Do not share, misuse, or attempt to access tokens or credentials.\n";
-echo "# Providers must contact directly for any discussions.\n";
-echo "# Unauthorized access or takedown attempts will face legal consequences.\n\n";
 
 foreach ($data['data'] as $channel) {
     $id        = $channel['id'] ?? '';
@@ -38,5 +33,6 @@ foreach ($data['data'] as $channel) {
 }
 exit;
 //@yuvraj824
+
 
 
