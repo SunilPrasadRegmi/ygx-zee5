@@ -1,8 +1,9 @@
 <?php
+
 //=============================================================================//
-// SCRIPT WRITTEN BY @YGX_WORLD TEAM, FOR EDUCATION PURPOSE ONLY.
-// Don't Sell this Script, This is 100% Free.
+// FOR EDUCATION PURPOSE ONLY. Don't Sell this Script, This is 100% Free.
 //=============================================================================//
+
 function base64UrlEncode($data) {
     $base64 = base64_encode($data);
     $base64 = strtr($base64, '+/', '-_');
@@ -136,3 +137,4 @@ function generateCookieZee5($userAgent) {
 }
 
 //@yuvraj824
+
