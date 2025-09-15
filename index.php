@@ -1,7 +1,7 @@
 <?php
 //=============================================================================//
-// SCRIPT WRITTEN BY @YGX_WORLD TEAM, FOR EDUCATION PURPOSE ONLY.
-// Don't Sell this Script, This is 100% Free.
+// FOR EDUCATION PURPOSE ONLY. Don't Sell this Script, This is 100% Free.
+// Join Community https://t.me/ygxworld, https://t.me/ygx_chat
 //=============================================================================//
 include_once '_functions.php';
 
@@ -10,7 +10,7 @@ $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? "Mozilla/5.0";
 $id = $_GET['id'] ?? null;
 if (!$id) {
     http_response_code(400);
-    die("Channel id not found in parameter.");
+    die("Channel id not found in query parameter.");
 }
 
 function getCookieZee5($userAgent) {
@@ -53,4 +53,5 @@ if ($channelData === null) {
 $initialUrl = $channelData['url'];
 $w = getCookieZee5($userAgent);
 header("Location: $initialUrl?$w");exit;
+
 //@yuvraj824
