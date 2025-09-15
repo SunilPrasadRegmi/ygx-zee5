@@ -2,6 +2,7 @@
 
 //=============================================================================//
 // FOR EDUCATION PURPOSE ONLY. Don't Sell this Script, This is 100% Free.
+// Join Community https://t.me/ygxworld, https://t.me/ygx_chat
 //=============================================================================//
 
 function base64UrlEncode($data) {
@@ -99,7 +100,7 @@ function fetchM3U8url() {
     curl_close($ch);
     $responseData = json_decode($response, true);
     if (!$responseData) {
-        exit("Invalid response recieved from api. Most probably your server IP is blocked.");
+        exit("Invalid response recieved from api. Most probably your server IP is blocked. This is geo restricted, accessible only  in India.");
     }
 
     if (isset($responseData['keyOsDetails']['video_token'])) {
@@ -108,7 +109,7 @@ function fetchM3U8url() {
         }
         return $responseData['keyOsDetails']['video_token'];
     } else {
-        exit("Error: Could not fetch m3u8 URL");
+        exit("Could not fetch m3u8 URL, most probably your server IP is blocked. This is geo restricted, accessible only  in India.");
     }
 }
 function generateCookieZee5($userAgent) {
@@ -125,7 +126,7 @@ function generateCookieZee5($userAgent) {
         curl_close($ch);
 
         if ($httpcode !== 200) {
-            exit("hdntl token can't be extracted, most probably your server IP is blocked.");
+            exit("required hdntl token can't be extracted, most probably your server IP is blocked. This is geo restricted, accessible only in India.");
         }
         if (preg_match('/hdntl=([^,\s]+)/', $result, $matches)) {
             return ['cookie' => $matches[0]];
@@ -137,4 +138,5 @@ function generateCookieZee5($userAgent) {
 }
 
 //@yuvraj824
+
 
