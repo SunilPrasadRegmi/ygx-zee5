@@ -67,7 +67,7 @@ foreach ($data['data'] as $channel) {
     $streamUrl = $scriptUrl . '?id=' . $id;
     
     
-    echo "#EXTINF:-1 tvg-id=\"$id\" tvg-country=\"$country\" tvg-chno=\"$chno\" tvg-language=\"$language\" tvg-name=\"$name\" tvg-logo=\"$logo\" group-title=\"$genre\", $chanName\n";
+    echo "#EXTINF:-1 tvg-id=\"$id\" tvg-country=\"$country\" tvg-chno=\"$chno\" tvg-language=\"$language\" tvg-name=\"$name\" tvg-logo=\"$logo\" group-title=\"$genre\", $name\n";
     echo "#KODIPROP:inputstream=inputstream.adaptive\n";
     echo "#KODIPROP:inputstream.adaptive.manifest_type=HLS\n";
     echo "#KODIPROP:inputstream.adaptive.manifest_headers=User-Agent=".urlencode($userAgent)."\n";
@@ -77,3 +77,4 @@ foreach ($data['data'] as $channel) {
 }
 exit;
 //@yuvraj824
+
