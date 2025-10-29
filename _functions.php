@@ -42,7 +42,7 @@ function generateGuestToken() {
 function fetchPlatformToken() {
     $ch = curl_init();
     curl_setopt_array($ch, [
-        CURLOPT_URL => 'https://www.zee5.com/live-tv/aaj-tak/0-9-aajtak',
+        CURLOPT_URL => 'https://www.zee5.com/global/live-tv/zee-one/0-9-9z5825786',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HTTPHEADER => [
             'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
@@ -126,3 +126,4 @@ function generateCookieZee5($userAgent) {
 }
 
 //@yuvraj824
+
